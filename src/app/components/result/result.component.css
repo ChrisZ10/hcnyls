@@ -1,0 +1,54 @@
+span {
+  margin: 0 10px;
+  line-height: 100%;
+  vertical-align: text-top;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 50px;
+  width: 800px;
+}
+
+li {
+  vertical-align: middle;
+}
+
+li.active {
+  background-color: orange;
+  border: none;
+}
+
+span.title {
+  display: inline-block;
+  width: 400px;
+  word-wrap: break-word;
+}
+
+span.author {
+  display: inline-block;
+  width: 100px;
+  word-wrap: break-word;
+}
+
+span.count {
+  display: inline-block;
+  width: 50px;
+  word-wrap: break-word;
+}
+
+span.last {
+  float: right;
+  margin-right: -10px;
+}
+
+span.last-header {
+  float: right;
+}
+
+
+.btn {
+  background-color: orange;
+  border: none;
+  margin-top: 0 !important;
+}

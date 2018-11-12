@@ -1,0 +1,19 @@
+<div class="container">
+  <form (submit)="onSubmit()">
+    ISBN1:<br>
+    <input class="form-control" type="text" name="isbn1" placeholder="10-digit isbn" [(ngModel)]="isbn1" required>
+    ISBN2:<br>
+    <input class="form-control" type="text" name="isbn2" placeholder="13-digit isbn" [(ngModel)]="isbn2" required>
+    Title:<br>
+    <input class="form-control" type="text" name="title" [(ngModel)]="title" required>
+    Author1:<br>
+    <input class="form-control" type="text" name="author1" [(ngModel)]="author1" required>
+    Author2:<br>
+    <input class="form-control" type="text" name="author2" placeholder="if any" [(ngModel)]="author2">
+    Description:<br>
+    <input class="form-control" type="text" name="desc" [(ngModel)]="desc" placeholder="optional">
+    Count:<br>
+    <input class="form-control" type="number" name="count" [(ngModel)]="count" required>
+    <input class="btn btn-info m-2" type="submit" value="Submit">
+  </form>
+</div>

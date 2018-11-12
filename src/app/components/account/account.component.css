@@ -1,0 +1,42 @@
+span {
+  margin: 0 20px;
+}
+
+span.title {
+  margin-right: 40px;
+  margin-left: 0px;
+}
+
+span.expire {
+  margin-left: 0px;
+}
+
+.header {
+  margin-top: 50px;
+  background-color: orange;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  font-weight: normal;
+  font-size: 18px;
+  width: 500px;
+}
+
+.btn {
+  background-color: orange !important;
+  border: none;
+  width: 100px;
+  margin-left: 0 !important;
+  margin-top: 50px !important;
+}
+
+li.list-group-item {
+  margin-left: 10px !important;
+  padding-left: 0px !important;
+  border: none !important;
+}
+
+i {
+  color: orange;
+  margin-right: 10px;
+}

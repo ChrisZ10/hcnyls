@@ -1,0 +1,20 @@
+button {
+  background: none;
+  color: white;
+}
+
+.navbar-brand {
+  color: white;
+}
+
+nav {
+  background-color: orange !important;
+}
+
+button:hover {
+  color: yellow;
+}
+
+nav {
+  height: 60px !important;
+}

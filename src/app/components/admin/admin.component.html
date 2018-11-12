@@ -1,0 +1,32 @@
+<div class="container">
+  <form #formElement *ngIf="!admin_isLogged" (submit)="onSubmit(message)">
+    User Name:<br>
+    <input class="form-control" type="text" name="name" [(ngModel)]="name" required>
+    Password:<br>
+    <input class="form-control" type="password" name="pwd" [(ngModel)]="pwd" required>
+    <input class="btn btn-info m-2" type="submit" value="Submit">
+  </form>
+
+  <ng-template #message let-modal>
+    <div class="modal-header">
+      <h6 class="modal-title">Login Failed</h6>
+      <button type="button" class="close" (click)="modal.dismiss()">
+        <span class="cross">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <h6>Incorrect Username or Password!</h6>
+    </div>
+  </ng-template>
+
+  <div *ngIf="admin_isLogged">
+    <h3 class="header" *ngIf="admin_isLogged">Admin</h3>
+    <h3 class="header">Handle Request</h3>
+    <app-requests></app-requests>
+    <h3 class="header">Add a Book</h3>
+    <app-add-book></app-add-book>
+    <button class="btn btn-info m-2" (click)="onLogout(message)">Log Out</button>
+  </div>
+</div>
+
+

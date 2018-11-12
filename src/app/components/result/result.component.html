@@ -1,0 +1,19 @@
+<div class="container">
+  <ul class="list-group">
+    <li class="list-group-item active" id="header">
+        <span class="title">Title</span>
+        <span class="author">Author</span>
+        <span class="count">Count</span>
+
+        <span class="last-header">Availability</span>
+    </li>
+    <li class="list-group-item" *ngFor="let book of books; let i = index;">
+      <span class="title">{{book.title}}</span>
+      <span class="author">{{book.author[0]}}</span>
+      <span class="count">{{book.count}}</span>
+
+      <span class="last" *ngIf="!book.avail"></span>
+      <span class="last" *ngIf="book.avail"><button class="btn btn-info m-2" routerLink='/result' (click)="onClick($event, i)">request it </button></span>
+    </li>
+  </ul>
+</div>

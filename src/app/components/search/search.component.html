@@ -1,0 +1,6 @@
+<div class="container">
+  <form class="form-inline" (submit)="onSubmit()">
+    <input class="form-control" type="text" name="keyword" placeholder="Search by Book Title" [(ngModel)]="this.searchService.keyword">
+    <input class="btn btn-info m-2" type="submit" value="Submit">
+  </form>
+</div>

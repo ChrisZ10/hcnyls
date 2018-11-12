@@ -1,0 +1,27 @@
+<div class="container">
+  <form #formElement (submit)="onSubmit(message)">
+    Email:<br>
+    <input class="form-control" type="text" name="email" (change)="onChanges()" [(ngModel)]="email" required>
+    First name:<br>
+    <input class="form-control" type="text" name="fname" (change)="onChanges()" [(ngModel)]="fname" required>
+    Last Name:<br>
+    <input class="form-control" type="text" name="lname" (change)="onChanges()" [(ngModel)]="lname" required>
+    Password:<br>
+    <input class="form-control" type="password" name="pwd" (change)="onChanges()" [(ngModel)]="pwd" required>
+    Confirm Password:<br>
+    <input class="form-control" type="password" name="cpwd" (change)="onChanges()" [(ngModel)]="cpwd" required>
+    <input class="btn btn-info m-2" type="submit" value="Submit">
+  </form>
+
+  <ng-template #message let-modal>
+    <div class="modal-header">
+      <h6 class="modal-title">Signup Failed</h6>
+      <button type="button" class="close" (click)="modal.dismiss()">
+        <span class="cross">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <h6>Invalid Input!</h6>
+    </div>
+  </ng-template>
+</div>

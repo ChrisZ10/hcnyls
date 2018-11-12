@@ -1,0 +1,12 @@
+.btn {
+  background-color: orange !important;
+  border: none;
+}
+
+.form-control {
+  width: 80%;
+}
+
+form {
+  margin-top: 200px;
+}

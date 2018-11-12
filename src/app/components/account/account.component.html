@@ -1,0 +1,35 @@
+<div class="container">
+
+  <h3 class="header" *ngIf="acct === undefined">Please log in first</h3>
+  <h3 class="header" *ngIf="acct !== undefined">Welcome back! {{acct.fname}} {{acct.lname}}</h3>
+
+  <h3 class="header" *ngIf="acct !== undefined">Processing:</h3>
+  <div *ngIf="acct !== undefined">
+    <ul class="list-group" *ngFor="let book of acct.processing">
+      <li class="list-group-item"><i class="fas fa-book"></i>{{book.title}}</li>
+    </ul>
+  </div>
+
+  <h3 class="header" *ngIf="acct !== undefined">Pickup:</h3>
+  <div *ngIf="acct !== undefined">
+    <ul class="list-group" *ngFor="let book of acct.pickup">
+      <li class="list-group-item">
+        <i class="fas fa-book"></i><span class="title">{{book.title}}</span>
+        <i class="far fa-calendar-alt"></i><span class="expire">{{book.expire}}</span>
+      </li>
+    </ul>
+  </div>
+
+  <h3 class="header" *ngIf="acct !== undefined">Checkout:</h3>
+  <div *ngIf="acct !== undefined">
+    <ul class="list-group" *ngFor="let book of acct.checkout">
+      <li class="list-group-item">
+        <i class="fas fa-book"></i><span class="title">{{book.title}}</span>
+        <i class="far fa-calendar-alt"></i><span class="expire">{{book.expire}}</span>
+      </li>
+    </ul>
+  </div>
+
+  <button class="btn btn-info m-2" *ngIf="acct !== undefined" (click)="onLogOut()">Log Out</button>
+
+</div>
