@@ -69,6 +69,8 @@ export class SignupComponent implements OnInit {
           this.router.navigate(['/account/' + this.loginService.acct.email]);
         } else {
           this.isSuccessful = false;
+          this.formElement.nativeElement.ownerDocument.activeElement.blur();
+          this.modalService.open(message);
         }
         console.log(this.isSuccessful);
       });
